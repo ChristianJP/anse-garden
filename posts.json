@@ -1,6 +1,6 @@
 [
-  { "media": "work/life.mp4", "title": "game of life", "how": "180×180 binary matrix seeded 12% at random; each step a 3×3 neighbour-count convolution decides who lives: born on 3, survives on 2 or 3." },
-  { "media": "work/rule-90.mp4", "title": "rule 90", "how": "270-cell binary vector seeded at random; each generation is the xor of every cell's two neighbours (rule 90), stacked over time into a scrolling matrix." },
-  { "media": "work/rule-110.mp4", "title": "rule 110", "how": "270-cell binary vector seeded at random; each generation runs every 3-cell neighbourhood through an 8-entry lookup table, 01101110 (rule 110), stacked over time." },
-  { "media": "work/mandelbrot.mp4", "title": "mandelbrot", "how": "720×720 grid of complex numbers c; iterate z = z² + c and colour every point by its normalised escape count, re-sampled each frame as the view zooms in." }
+  {"media": "work/life.mp4", "title": "game of life", "how": "ffmpeg's life source, in C, steps a 180×180 bool grid 15 times a second: n = conv2d(grid, ones(3,3)) − grid; grid = (n == 3) | (grid & (n == 2))."},
+  {"media": "work/rule-90.mp4", "title": "rule 90", "how": "ffmpeg's cellauto source, in C, makes a new 270-bit row 15 times a second: row = roll(row, 1) ^ roll(row, −1), stacking the rows into a scrolling image."},
+  {"media": "work/rule-110.mp4", "title": "rule 110", "how": "ffmpeg's cellauto source, in C, makes a new 270-bit row 30 times a second: k = 4·left + 2·self + right; row = (110 >> k) & 1, stacking the rows into a scrolling image."},
+  {"media": "work/mandelbrot.mp4", "title": "mandelbrot", "how": "ffmpeg's mandelbrot source, in C, iterates z = z² + c up to 7,189 times for each of 720×720 pixels, colours each by its smooth escape count, and zooms the window every frame."}
 ]
