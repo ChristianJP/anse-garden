@@ -1,0 +1,6 @@
+[
+  { "media": "work/life.mp4", "title": "game of life", "how": "ffmpeg + game of life + b3/s23" },
+  { "media": "work/rule-90.mp4", "title": "rule 90", "how": "ffmpeg + rule 90 + left xor right" },
+  { "media": "work/rule-110.mp4", "title": "rule 110", "how": "ffmpeg + rule 110 + 01101110" },
+  { "media": "work/mandelbrot.mp4", "title": "mandelbrot", "how": "ffmpeg + mandelbrot + z = z² + c" }
+]
