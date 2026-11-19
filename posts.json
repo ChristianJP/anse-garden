@@ -1,6 +1,6 @@
 [
-  {"media": "work/life.mp4", "title": "game of life", "how": "ffmpeg's life source, in C, steps a 180×180 bool grid 15 times a second: n = conv2d(grid, ones(3,3)) − grid; grid = (n == 3) | (grid & (n == 2))."},
-  {"media": "work/rule-90.mp4", "title": "rule 90", "how": "ffmpeg's cellauto source, in C, makes a new 270-bit row 15 times a second: row = roll(row, 1) ^ roll(row, −1), stacking the rows into a scrolling image."},
-  {"media": "work/rule-110.mp4", "title": "rule 110", "how": "ffmpeg's cellauto source, in C, makes a new 270-bit row 30 times a second: k = 4·left + 2·self + right; row = (110 >> k) & 1, stacking the rows into a scrolling image."},
-  {"media": "work/mandelbrot.mp4", "title": "mandelbrot", "how": "ffmpeg's mandelbrot source, in C, iterates z = z² + c up to 7,189 times for each of 720×720 pixels, colours each by its smooth escape count, and zooms the window every frame."}
+  {"media": "work/life.mp4", "title": "game of life", "how": "random binary matrix → a dead cell with 3 live neighbours comes alive, a live one with 2–3 stays, the rest die → leftovers lock into objects → some sit still, some blink, some crawl across"},
+  {"media": "work/rule-90.mp4", "title": "rule 90", "how": "random row of 1s and 0s → each new row: every cell = left neighbour xor right neighbour → the rows stack → triangles inside triangles appear on their own"},
+  {"media": "work/rule-110.mp4", "title": "rule 110", "how": "random row of 1s and 0s → each new row: every cell + its 2 neighbours looked up in an 8-entry table → the rows stack → particles appear and crash into each other"},
+  {"media": "work/mandelbrot.mp4", "title": "mandelbrot", "how": "every pixel is a number c → repeat z = z² + c → if z blows up, colour it by how fast → if it never does, it's in the set → zoom in and the edge never ends"}
 ]
