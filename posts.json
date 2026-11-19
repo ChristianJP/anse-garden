@@ -1,6 +1,6 @@
 [
-  { "media": "work/life.mp4", "title": "game of life", "how": "ffmpeg + game of life + b3/s23" },
-  { "media": "work/rule-90.mp4", "title": "rule 90", "how": "ffmpeg + rule 90 + left xor right" },
-  { "media": "work/rule-110.mp4", "title": "rule 110", "how": "ffmpeg + rule 110 + 01101110" },
-  { "media": "work/mandelbrot.mp4", "title": "mandelbrot", "how": "ffmpeg + mandelbrot + z = z² + c" }
+  { "media": "work/life.mp4", "title": "game of life", "how": "180×180 binary matrix seeded 12% at random; each step a 3×3 neighbour-count convolution decides who lives: born on 3, survives on 2 or 3." },
+  { "media": "work/rule-90.mp4", "title": "rule 90", "how": "270-cell binary vector seeded at random; each generation is the xor of every cell's two neighbours (rule 90), stacked over time into a scrolling matrix." },
+  { "media": "work/rule-110.mp4", "title": "rule 110", "how": "270-cell binary vector seeded at random; each generation runs every 3-cell neighbourhood through an 8-entry lookup table, 01101110 (rule 110), stacked over time." },
+  { "media": "work/mandelbrot.mp4", "title": "mandelbrot", "how": "720×720 grid of complex numbers c; iterate z = z² + c and colour every point by its normalised escape count, re-sampled each frame as the view zooms in." }
 ]
