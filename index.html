@@ -58,10 +58,10 @@
   .work { position: absolute; display: block; overflow: hidden; pointer-events: auto; cursor: zoom-in; }
   .work img, .work video { width: 100%; height: 100%; object-fit: cover; display: block; }
   .full { position: fixed; inset: 0; z-index: 6; background: var(--bg); cursor: zoom-out; }
-  .full-media { position: absolute; inset: calc(70px + env(safe-area-inset-top)) 20px calc(86px + env(safe-area-inset-bottom)); }
-  @media (max-width: 600px) { .full-media { bottom: calc(118px + env(safe-area-inset-bottom)); } } /* a caption wraps to three or four lines here */
+  .full-media { position: absolute; inset: calc(70px + env(safe-area-inset-top)) 20px calc(108px + env(safe-area-inset-bottom)); }
+  @media (max-width: 600px) { .full-media { bottom: calc(146px + env(safe-area-inset-bottom)); } } /* a caption wraps to five or six lines here */
   .full-media img, .full-media video { width: 100%; height: 100%; object-fit: contain; display: block; }
-  .post { white-space: normal; text-align: center; width: max-content; max-width: min(600px, calc(100vw - 40px)); line-height: 1.5; }
+  .post { white-space: pre-line; text-align: center; width: max-content; max-width: min(600px, calc(100vw - 40px)); line-height: 1.5; }
   html.og .ui { display: none; }
 
   .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
@@ -776,7 +776,7 @@ class Garden {
     this.fullEl.querySelector('.full-media').replaceChildren(this.media(p));
     // one line at the bottom, like the homepage's: how it was made, linking to its post (the profile until it has one)
     const a = this.fullEl.querySelector('.post');
-    a.textContent = (p.how || 'view post') + ' ↗'; a.href = p.url || IG_URL;
+    a.textContent = ([p.how, p.made].filter(Boolean).join('\n') || 'view post') + ' ↗'; a.href = p.url || IG_URL; // what happens, then what it's made with
     this.fullEl.hidden = false; this.playWorks(false); this.syncButton();
   }
   closeFull() {

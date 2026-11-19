@@ -1,6 +1,6 @@
 [
-  {"media": "work/life.mp4", "title": "game of life", "how": "random binary matrix → a dead cell with 3 live neighbours comes alive, a live one with 2–3 stays, the rest die → leftovers lock into objects → some sit still, some blink, some crawl across"},
-  {"media": "work/rule-90.mp4", "title": "rule 90", "how": "random row of 1s and 0s → each new row: every cell = left neighbour xor right neighbour → the rows stack → triangles inside triangles appear on their own"},
-  {"media": "work/rule-110.mp4", "title": "rule 110", "how": "random row of 1s and 0s → each new row: every cell + its 2 neighbours looked up in an 8-entry table → the rows stack → particles appear and crash into each other"},
-  {"media": "work/mandelbrot.mp4", "title": "mandelbrot", "how": "every pixel is a number c → repeat z = z² + c → if z blows up, colour it by how fast → if it never does, it's in the set → zoom in and the edge never ends"}
+  {"media": "work/life.mp4", "title": "game of life", "how": "random binary matrix → a dead cell with 3 live neighbours comes alive, a live one with 2–3 stays, the rest die → leftovers lock into objects → some sit still, some blink, some crawl across", "made": "C + ffmpeg life filter + B3/S23 + h.264"},
+  {"media": "work/rule-90.mp4", "title": "rule 90", "how": "random row of 1s and 0s → each new row: every cell = left neighbour xor right neighbour → the rows stack → triangles inside triangles appear on their own", "made": "C + ffmpeg cellauto + rule 90 + h.264"},
+  {"media": "work/rule-110.mp4", "title": "rule 110", "how": "random row of 1s and 0s → each new row: every cell + its 2 neighbours looked up in an 8-entry table → the rows stack → particles appear and crash into each other", "made": "C + ffmpeg cellauto + rule 110 + h.264"},
+  {"media": "work/mandelbrot.mp4", "title": "mandelbrot", "how": "every pixel is a number c → repeat z = z² + c → if z blows up, colour it by how fast → if it never does, it's in the set → zoom in and the edge never ends", "made": "C + ffmpeg mandelbrot + z = z² + c + h.264"}
 ]

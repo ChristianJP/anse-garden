@@ -17,11 +17,11 @@ The PORTFOLIO button opens a plain ASCII box of 18 equal squares: 6 across and 3
 To add work:
 
 1. Put the file in `work/`. A looping MP4 plays just like a GIF and is much smaller.
-2. Add it to `posts.json`. The first entry goes in the first square. `how` is the one line shown under it full screen; leave `url` out until it's posted and it links to the profile:
+2. Add it to `posts.json`. The first entry goes in the first square. `how` is the step-by-step caption shown under it full screen and `made` the line under that (language + tools + maths); leave `url` out until it's posted and it links to the profile:
 
    ```json
    [
-     { "media": "work/first-post.mp4", "url": "https://www.instagram.com/p/XXXXXXXXXXX/", "title": "First post", "how": "js + webgl + z → z² + c" }
+     { "media": "work/first-post.mp4", "url": "https://www.instagram.com/p/XXXXXXXXXXX/", "title": "First post", "how": "random grid → … → objects crawl across", "made": "js + webgl + z = z² + c" }
    ]
    ```
 
